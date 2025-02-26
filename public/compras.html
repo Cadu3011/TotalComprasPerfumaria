@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Total Compras Perfumarias</h1>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="dataInicio">Data de Início:</label>
+                <input type="date" id="dataInicio">
+            </div>
+
+            <div class="form-group">
+                <label for="dataFim">Data de Fim:</label>
+                <input type="date" id="dataFim">
+            </div>
+
+            <div class="form-group">
+                <label for="orcamento">Orçamento:</label>
+                <div class="orcamento-container">
+                    <input type="number" id="orcamento" placeholder="Valor do Orçamento">
+                    <button id="calcularBtn">Calcular</button>
+                </div>
+            </div>
+        </div>
+
+        <button id="buscarBtn">Busca</button>
+        <div id="loading"></div> <!-- Ícone de carregamento -->
+        <div id="resultado" class="resultado"></div>
+        <div id="totalCompra" class="resultado total-compra"></div>
+        <div id="orcamentoDisponivel" class="resultado total-compra"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
