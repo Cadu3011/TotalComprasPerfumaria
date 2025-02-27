@@ -36,7 +36,7 @@ document.getElementById("buscarBtn").addEventListener("click", async function() 
 
     // Chama a API ou endpoint que rodará o script Playwright no backend
     try {
-        const response = await fetch('http://localhost:8000/api/rodar-relatorio', {
+        const response = await fetch('https://totalcomprasperfumaria.railway.internal/api/rodar-relatorio', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
