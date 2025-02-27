@@ -46,7 +46,9 @@ document.getElementById("buscarBtn").addEventListener("click", async function() 
                 dataFim: formattedDataFim         // Envia como 'YYYY-MM-DD'
             }),
             cache: "no-store"
-        });
+        }).then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error("Erro:", error));;
         
          result = await response.json();
         const totalCompra = result.totalCompra || 'Valor não encontrado';
