@@ -8,6 +8,12 @@ const path = require('path');
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use((req, res, next) => {
+    res.set("Cache-Control", "no-cache, no-store, must-revalidate");
+    res.set("Pragma", "no-cache");
+    res.set("Expires", "0");
+    next();
+  });
 // Endpoint para rodar o relatório
 app.post('/api/rodar-relatorio', async (req, res) => {
     const { dataInicio, dataFim } = req.body;

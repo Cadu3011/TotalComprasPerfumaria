@@ -44,7 +44,8 @@ document.getElementById("buscarBtn").addEventListener("click", async function() 
             body: JSON.stringify({
                 dataInicio: formattedDataInicio,  // Envia como 'YYYY-MM-DD', pois o backend pode precisar disso
                 dataFim: formattedDataFim         // Envia como 'YYYY-MM-DD'
-            })
+            }),
+            cache: "no-store"
         });
         
          result = await response.json();
