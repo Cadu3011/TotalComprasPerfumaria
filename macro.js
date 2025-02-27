@@ -74,8 +74,8 @@ app.post('/api/rodar-relatorio', async (req, res) => {
             console.log('Seletor não encontrado dentro do tempo limite de 2 segundos. Fechando a aba.');
         }
     } catch (error) {
-        console.log('Erro: A nova aba não foi aberta dentro do tempo limite de 50 segundos. Fechando o navegador.');
-        res.status(500).json({ message: 'Erro ao rodar o script Playwright' }); 
+        console.log('Erro: A nova aba não foi aberta dentro do tempo limite de 50 segundos. Fechando o navegador.',error);
+        res.status(500).json({ message: 'Erro ao rodar o script Playwright',error }); 
     }
        
 });
